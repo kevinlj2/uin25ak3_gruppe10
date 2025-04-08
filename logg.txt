@@ -1,0 +1,13 @@
+Arbeidslogg:
+
+Kevin:
+
+Satt opp sanity
+Satt opp react
+Lagt inn Sanity clienten
+
+Lagt inn medlemmene i gruppen i sanity
+
+Opprettet Layout.jsx, Nav.jsx, PersonCard.jsx
+
+Didrik:
