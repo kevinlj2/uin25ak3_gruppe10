@@ -1,23 +1,27 @@
 export const groupmembers = {
-  name: 'groupmembers',
+  name: 'members',
   title: 'Members',
   type: 'document',
   fields: [
     {
-      name: 'Navn',
+      name: 'Name',
       type: 'string',
     },
     {
-      name: 'Email',
+      name: 'Epost',
       type: 'string',
     },
     {
-      name: 'Interesser',
+      name: 'Intrests',
       type: 'string',
     },
     {
       name: 'Biografi',
       type: 'string',
+    },
+    {
+      name: 'Bilde',
+      type: 'image',
     },
   ],
 }
