@@ -1,8 +1,13 @@
-export const groupmembers = {
+export const groupMembers = {
   name: 'members',
   title: 'Members',
   type: 'document',
   fields: [
+    {
+      name: 'gruppeNummer',
+      title: 'GruppeNummer',
+      type: 'string',
+    },
     {
       name: 'Name',
       type: 'string',

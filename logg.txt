@@ -11,3 +11,9 @@ Lagt inn medlemmene i gruppen i sanity
 Opprettet Layout.jsx, Nav.jsx, PersonCard.jsx
 
 Didrik:
+
+Oppdaterte groupMembers.js 
+Oppdatert klienten 
+
+Laget en query som fetcher members
+Opprettet Header.jsx (Behøver hjelp der)
