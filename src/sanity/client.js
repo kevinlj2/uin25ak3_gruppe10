@@ -1,8 +1,14 @@
-import SanityClientConstructor from "@sanity/client";
+import { SanityClient } from "@sanity/client";
 
-export const client = SanityClientConstructor({
+const options = {
   projectId: "f6809pwb",
   dataset: "production",
-  apiVersion: "v2025-03-24",
-  useCdn: false,
+};
+
+const client = SanityClient({
+  ...options,
+  apiVersion: "v2025-04-08",
+  useCdn: true,
 });
+
+export default client;
