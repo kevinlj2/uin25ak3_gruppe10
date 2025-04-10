@@ -12,3 +12,14 @@ const client = SanityClient({
 });
 
 export default client;
+
+export const getHeaderData = async () => {
+  const query = `*[_type == "members"][0]{
+  Name,
+  Epost,
+  Intrests,
+  Biografi,
+  Bilde
+}`;
+  return await client.fetch(query);
+};
