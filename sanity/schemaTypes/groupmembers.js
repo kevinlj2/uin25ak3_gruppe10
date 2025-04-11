@@ -1,4 +1,4 @@
-export const groupMembers = {
+export const groupmembers = {
   name: 'members',
   title: 'Members',
   type: 'document',
