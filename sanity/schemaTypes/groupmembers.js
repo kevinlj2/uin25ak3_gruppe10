@@ -4,12 +4,7 @@ export const groupmembers = {
   type: 'document',
   fields: [
     {
-      name: 'gruppeNummer',
-      title: 'GruppeNummer',
-      type: 'string',
-    },
-    {
-      name: 'Name',
+      name: 'Navn',
       type: 'string',
     },
     {
@@ -17,7 +12,7 @@ export const groupmembers = {
       type: 'string',
     },
     {
-      name: 'Intrests',
+      name: 'Interesser',
       type: 'string',
     },
     {
