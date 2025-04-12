@@ -1,23 +1,30 @@
-import { useState, useEffect } from "react";
-import { getHeaderData } from "../sanity/client";
+import { useEffect, useState } from "react";
+import { getGroupMembers } from "../sanity/groupindex";
 
-export default function Header() {
-  const [headerData, setHeaderData] = useState(null);
+const Header = () => {
+  const [members, setMembers] = useState([]);
 
   useEffect(() => {
-    getHeaderData().then((data) => setHeaderData(data));
+    const fetchData = async () => {
+      const data = await getGroupMembers();
+      setMembers(data || []);
+    };
+
+    fetchData();
   }, []);
 
   return (
-    <header>
-      <h1>{headerData.gruppeNummer}</h1>
+    <div>
       <nav>
+        <h2>TEAM X</h2>
         <ul>
-          <li>
-            <a href="/">Hjem</a>
-          </li>
+          {members.map((member, index) => (
+            <li key={index}>{member.Navn}</li>
+          ))}
         </ul>
       </nav>
-    </header>
+    </div>
   );
-}
+};
+
+export default Header;
