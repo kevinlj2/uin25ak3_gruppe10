@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getWorklog } from "../sanity/groupindex"; // eller hvor du har plassert funksjonen
 
-const Logg = () => {
+export default function Logg() {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
@@ -14,28 +14,16 @@ const Logg = () => {
   }, []);
 
   return (
-    <div>
+    <section>
       <h2>Arbeidslogg</h2>
-      {logs.length === 0 ? (
-        <p>Ingen logger funnet.</p>
-      ) : (
-        logs.map((log) => (
-          <div key={log.Lognumber}>
-            <h3>Logg {log.Lognumber}</h3>
-            <p>
-              <strong>Loggført av:</strong> {log.memberlog}
-            </p>
-            <p>
-              <strong>Timer brukt:</strong> {log.hoursspent}
-            </p>
-            <p>
-              <strong>Beskrivelse:</strong> {log.logs}
-            </p>
-          </div>
-        ))
-      )}
-    </div>
+      {logs.map((log) => (
+        <div key={log.lognumber}>
+          <h3>Logg {log.lognumber}</h3>
+          <p>Loggført av: {log.memberlog}</p>
+          <p>Timer brukt: {log.hoursspent}</p>
+          <p>Beskrivelse: {log.logs}</p>
+        </div>
+      ))}
+    </section>
   );
-};
-
-export default Logg;
+}
