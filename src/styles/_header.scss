@@ -1,0 +1,16 @@
+nav {
+  background-color: purple;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+
+    Link {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
