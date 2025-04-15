@@ -1,17 +1,10 @@
 import Header from "./Header";
-import Logg from "./Logg";
-import PersonCard from "./PersonCard";
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <section>
-        <PersonCard />
-      </section>
-      <section>
-        <Logg />
-      </section>
+      <main>{children}</main>;
     </>
   );
 }
