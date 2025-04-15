@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getGroupMembers } from "../sanity/groupindex";
 
-const PersonCard = () => {
+export default function PersonCard() {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,4 @@ const PersonCard = () => {
       ))}
     </div>
   );
-};
-
-export default PersonCard;
+}
