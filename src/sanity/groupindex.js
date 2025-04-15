@@ -21,6 +21,7 @@ export const getGroupMembers = async () => {
 
 export const getWorklog = async () => {
   const query = `*[_type == "worklog"] | order(Lognumber asc){
+    lognumber,
     logs,
     hoursspent,
     memberlog,

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getGroupMembers } from "../sanity/groupindex";
 import { Link } from "react-router-dom";
+import "../styles/_header.scss";
 
 export default function Header() {
   const [members, setMembers] = useState([]);

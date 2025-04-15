@@ -4,8 +4,7 @@ export const worklog = {
   type: 'document',
   fields: [
     {
-      name: 'Lognumber',
-      title: 'Loggnummer',
+      name: 'lognumber',
       type: 'number',
     },
     {
@@ -22,6 +21,11 @@ export const worklog = {
       name: 'memberlog',
       title: 'Medlem som logger',
       type: 'string',
+    },
+    {
+      name: 'dato',
+      title: 'Dato',
+      type: 'date',
     },
   ],
 }

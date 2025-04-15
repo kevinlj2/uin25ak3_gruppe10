@@ -19,7 +19,6 @@ export default function PersonPage() {
         (log) => log.memberlog === funnet?.Navn
       );
 
-      console.log("LOGS FOR:", funnet?.Navn, personLogs); // Debug
       setLogs(personLogs);
     };
 
@@ -27,6 +26,7 @@ export default function PersonPage() {
   }, [slug]);
 
   if (!medlem) return <p>Laster medlem...</p>;
+
   return (
     <>
       <h1>{medlem.Navn}</h1>
@@ -34,13 +34,14 @@ export default function PersonPage() {
       <p>{medlem.Biografi}</p>
       <img src={medlem.BildeUrl} alt={medlem.Navn} width="200" />
       <h2>Arbeidslogg</h2>
-      <ul>
-        {logs.map((log) => (
-          <li key={log.Lognumber}>
-            {log.dato} {log.logs} – {log.hoursspent} timer
-          </li>
-        ))}
-      </ul>
+      {logs.map((log) => (
+        <div key={log.lognumber}>
+          <p>{log.dato}</p>
+          <p>{log.memberlog}</p>
+          <p>{log.logs}</p>
+          <p>{log.hoursspent} timer</p>
+        </div>
+      ))}
     </>
   );
 }
