@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { getGroupMembers } from "../sanity/groupindex";
+import { Link } from "react-router-dom";
 
-const Header = () => {
+export default function Header() {
   const [members, setMembers] = useState([]);
 
   useEffect(() => {
@@ -14,17 +15,20 @@ const Header = () => {
   }, []);
 
   return (
-    <div>
-      <nav>
-        <h2>TEAM X</h2>
-        <ul>
-          {members.map((member, index) => (
-            <li key={index}>{member.Navn}</li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <h2>
+        <Link to="/">TEAM X</Link>
+      </h2>
+      <ul>
+        <li>
+          <Link to="/">Hjem</Link>
+        </li>
+        {members.map((member, index) => (
+          <li key={index}>
+            <Link to={`/medlem/${member.slug}`}>{member.Navn}</Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
-};
-
-export default Header;
+}
