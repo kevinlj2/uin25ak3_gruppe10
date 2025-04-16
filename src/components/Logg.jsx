@@ -14,7 +14,7 @@ export default function Logg() {
   }, []);
 
   return (
-    <section>
+    <section className="log">
       <h2>Arbeidslogg</h2>
       {logs.map((log) => (
         <div key={log.lognumber}>

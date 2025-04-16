@@ -14,9 +14,9 @@ export default function PersonCard() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {members.map((member, index) => (
-        <div key={index}>
+        <div key={index} className="personcard">
           <h2>{member.Navn}</h2>
           <p>{member.Epost}</p>
           {member.BildeUrl && (

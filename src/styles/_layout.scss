@@ -6,3 +6,32 @@
 #root {
   width: 100%;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 50px;
+}
+
+.personcard {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 15px;
+}
+
+.log {
+  margin: 0px 175px;
+
+  div {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+}
