@@ -1,16 +1,29 @@
 nav {
   background-color: purple;
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
 
   ul {
     text-decoration: none;
     list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 10px 25px;
 
-    Link {
-      text-decoration: none;
+    a {
       color: white;
     }
   }
+
+  h2 a {
+    color: white;
+    margin: 10px 25px;
+  }
+}
+
+.home {
+  border-right-style: solid;
+  border-width: 1px;
+  padding-right: 10px;
 }
