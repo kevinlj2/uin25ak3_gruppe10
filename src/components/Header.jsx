@@ -22,7 +22,9 @@ export default function Header() {
       </h2>
       <ul>
         <li>
-          <Link to="/">Hjem</Link>
+          <Link to="/" className="home">
+            Hjem
+          </Link>
         </li>
         {members.map((member, index) => (
           <li key={index}>
