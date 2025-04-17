@@ -18,7 +18,9 @@ export default function PersonCard() {
       {members.map((member, index) => (
         <div key={index} className="personcard">
           <h2>{member.Navn}</h2>
-          <p>{member.Epost}</p>
+          <p>
+            <a href={`mailto:${member.Epost}`}>{member.Epost}</a>
+          </p>
           {member.BildeUrl && (
             <img src={member.BildeUrl} alt={member.Name} width="200" />
           )}
